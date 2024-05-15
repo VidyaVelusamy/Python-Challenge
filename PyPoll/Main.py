@@ -1,8 +1,8 @@
 import os
 import csv
-import datetime
 
-Election_data = os.path.join("C:/Users/vidya/pythonassignment/Python-Challenge/PyPoll/","Resources","election_data.csv")
+
+Election_data = os.path.join("Resources","election_data.csv")
 
 
 print("Election Results")

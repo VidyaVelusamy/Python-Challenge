@@ -1,14 +1,13 @@
 import os
 import csv
-import datetime
 
-Budget_data = os.path.join("C:/Users/vidya/pythonassignment/Python-Challenge/PyBank/","Resources","budget_data.csv")
+# Read CSV file
+Budget_data = os.path.join("Resources","budget_data.csv")
 print ("Financial Analysis")
 print("----------------------------")
 with open(Budget_data) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
-
-    # @NOTE: This time, we do not use `next(csv_reader)` because there is no header for this file
+# initialize Variables
     count =0
     Total=0
     Change = 0
@@ -75,7 +74,7 @@ with open(Budget_data) as csvfile:
     print(f"Greatest decrease in Profits: {minperiod} ${greatest_decrease[0]}")
 output_path = os.path.join("C:/Users/vidya/pythonassignment/Python-Challenge/PyBank", "Analysis", "Budget_data_results.txt")
 
-# Open the file using "write" mode. Specify the variable to hold the contents
+# Open the file using "write" mode. 
 with open(output_path, "w") as file:
     file.write("Financial Analysis\n")
     file.write("----------------------------\n")
